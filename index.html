@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Person World Explorer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+</head>
+<body class="bg-gray-100">
+    <header class="flex justify-center lg:justify-start">
+        <h1 class="text-3xl font-bold text-black p-5 text-center">Random Person World Explorer</h1>
+    </header>
+    <div class="max-w-7xl mx-auto px-4 sm:px-5 lg:px-8">
+        <div class="grid lg:grid-cols-5 gap-6 grid-flow-row-dense">
+            <!-- profile-card -->
+            <div id="profile-card" class="bg-stone-950  text-white p-4 rounded-2xl shadow lg:col-span-2 lg:col-start-1 lg:row-span-4 py-4">
+                <div class="flex p-2 gap-5">
+                    <img class="w-20 h-20 my-auto object-contain rounded-full outline outline-white" id="profile-image" src="https://randomuser.me/api/portraits/men/14.jpg" alt="img">
+                    <div class="flex flex-col justify-evenly w-full">
+                        <h2 class="text-2xl font-semibold" id="profile-first-name">Frank</h2>
+                        <p id="profile-full-name" class="text-sm">Frank John Mackasky</p>
+                    </div>
+                </div>
+
+                <div class="flex p-2 gap-2">
+                    <div class="px-3 py-1 bg-white text-black rounded-3xl flex items-center gap-2">
+                            <span class="iconify w-4 h-4 text-black" data-icon="material-symbols:male"></span>
+                            <span id="profile-gender" class="text-sm font-medium">
+                                Female
+                            </span>
+                    </div>
+                    <div class="px-5 py-1 bg-orange-400 text-black rounded-3xl flex items-center gap-2">
+                        <span class="iconify w-4 h-4 text-black" data-icon="material-symbols:cake-add-outline-rounded"></span>
+                        <span id="profile-age" class="text-sm font-medium">40</span>
+                    </div>
+                </div>
+
+                <div class="p-2 mt-2">
+                    <p id="profile-intro" class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus fuga esse neque.</p>
+                    <div class="flex py-2 gap-2 items-center mt-2 font-extralight">
+                        <span class="iconify w-4 h-4 text-white" data-icon="material-symbols:location-on-outline"></span>
+                        <span id="profile-location" class="text-xs">New York, USA</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- weather -->
+            <div class="bg-white p-4 rounded shadow lg:col-span-2 lg:col-start-1 lg:row-span-3">weather</div>
+
+            <div class="bg-white p-4 rounded shadow lg:col-span-3 lg:col-start-3 lg:row-span-2">Movies</div>
+
+            <div class="bg-white p-4 rounded shadow lg:col-span-3 lg:col-start-3 lg:row-span-5">news Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, officia. Numquam vitae facere porro, at ipsam ut beatae maiores enim cum eos eligendi autem sint quod dolor incidunt aut quia dicta nobis. 
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque perferendis rem modi quibusdam obcaecati officia voluptatibus exercitationem quam reprehenderit! Corporis aperiam error nobis in voluptate inventore, aspernatur consequuntur accusamus quam, iusto ducimus.
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>
