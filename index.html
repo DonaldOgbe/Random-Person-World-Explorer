@@ -152,23 +152,21 @@
 
             <!-- movie -->
             <div
-                class="bg-stone-950 text-white flex gap-10 p-4 rounded-2xl shadow lg:col-span-2 lg:col-start-3 lg:row-span-2">
+                class="bg-stone-950 text-white lg:flex gap-10 p-4 rounded-2xl shadow lg:col-span-2 lg:col-start-3 lg:row-span-2 lg:h-72">
                 <div>
-                    <img id="movie-poster" class="rounded-2xl h-64 w-auto object-cover" src="" alt="movie-poster">
+                    <img id="movie-poster" class="rounded-2xl h-64 w-auto object-cover" src="https://image.tmdb.org/t/p/w154/usJxHVxT70lAA7AynnZlmPth7R3.jpg" alt="movie-poster">
                 </div>
-                <div class="max-w-60">
+                <div class="lg:max-w-64 flex flex-col h-full">
                     <div class="flex justify-between items-center">
-                        <span id="movie-title" class="text-3xl tracking-wide"></span>
+                        <span id="movie-title" class="text-lg lg:text-2xl tracking-wide"></span>
                         <span id="movie-rating"
                             class="align-middle bg-orange-400 p-1 text-black font-bold text-xs rounded-md"></span>
                     </div>
 
                     <span
-                        class="mt-4 font-semibold text-sm inline-flex items-center justify-center px-4  bg-white text-black rounded-3xl"
+                        class="mt-4 w-14 font-semibold text-sm inline-flex items-center justify-center px-4  bg-white text-black rounded-3xl"
                         id="movie-release-year"></span>
-                    <div class="mt-5 overflow-y-auto">
-                        <p class="font-[150]" id="movie-overview"></p>
-                    </div>
+                        <p class="mt-5 font-[150] overflow-y-auto" id="movie-overview"></p>
 
                 </div>
             </div>
