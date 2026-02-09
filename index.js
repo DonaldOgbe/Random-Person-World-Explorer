@@ -54,7 +54,7 @@ async function fetchNews(countryCode) {
       return [newData.top_news[0], newData.top_news[1], newData.top_news[2]];
     }
 
-    console.log(data)
+    console.log(data);
     const news = [data.top_news[0], data.top_news[1], data.top_news[2]];
 
     return news;
@@ -145,8 +145,8 @@ function updateWeather(weatherData) {
   weatherLocation.textContent = weatherData.location.name;
   weatherTemp.textContent = weatherData.current.temp_c;
 
-    let localDate = weatherData.location.localtime.split(" ")[0];
-    
+  let localDate = weatherData.location.localtime.split(" ")[0];
+
   weatherDay.textContent = getWeatherDay(localDate);
 
   weatherCondition.textContent = weatherData.current.condition.text;
@@ -194,21 +194,39 @@ function updateMovie(movieData) {
 }
 
 async function loadDashBoard() {
-  const randomePersonData = await updateRandomPerson();
-  const city = randomePersonData[0];
-  const countryCode = randomePersonData[1];
+  let city;
+  let countryCode;
 
-  const weatherData = await fetchWeather(city);
-  const newsData = await fetchNews(countryCode);
-  const movieData = await fetchMovies();
-
-  updateWeather(weatherData);
-
-  for (let i = 0; i < newsData.length; i++) {
-    updateNews(newsData[i], i + 1);
+  try {
+    const randomePersonData = await updateRandomPerson();
+    city = randomePersonData[0];
+    countryCode = randomePersonData[1];
+  } catch (error) {
+    console.error("Error updating random person:", error);
   }
 
-  updateMovie(movieData);
+  try {
+    const weatherData = await fetchWeather(city);
+    updateWeather(weatherData);
+  } catch (error) {
+    console.error("Error updating weather data:", error);
+  }
+
+  try {
+    const newsData = await fetchNews(countryCode);
+    for (let i = 0; i < newsData.length; i++) {
+      updateNews(newsData[i], i + 1);
+    }
+  } catch (error) {
+    console.error("Error updating news data:", error);
+  }
+
+  try {
+    const movieData = await fetchMovies();
+    updateMovie(movieData);
+  } catch (error) {
+    console.error("Error updating movie data:", error);
+  }
 }
 
 loadDashBoard();
