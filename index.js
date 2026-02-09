@@ -16,7 +16,7 @@ async function fetchRandomPerson() {
 async function fetchWeather(city) {
   try {
     const apiKey = "22819d3a541742b6b0a235958260502";
-    const url = `http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}&aqi=no`;
+    const url = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}&aqi=no`;
 
     const response = await fetch(url);
     const data = await response.json();
