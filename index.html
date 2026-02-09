@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,54 +8,188 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
 </head>
+
 <body class="bg-gray-100">
     <header class="flex justify-center lg:justify-start">
         <h1 class="text-3xl font-bold text-black p-5 text-center">Random Person World Explorer</h1>
     </header>
-    <div class="max-w-7xl mx-auto px-4 sm:px-5 lg:px-8">
+    <div class="max-w-7xl mx-auto my-5 px-4 sm:px-5 lg:px-8">
         <div class="grid lg:grid-cols-5 gap-6 grid-flow-row-dense">
             <!-- profile-card -->
-            <div id="profile-card" class="bg-stone-950  text-white p-4 rounded-2xl shadow lg:col-span-2 lg:col-start-1 lg:row-span-4 py-4">
+            <div id="profile-card"
+                class="bg-stone-950  text-white p-4 rounded-2xl shadow lg:col-span-2 lg:col-start-1 lg:row-span-4 py-4">
+
                 <div class="flex p-2 gap-5">
-                    <img class="w-20 h-20 my-auto object-contain rounded-full outline outline-white" id="profile-image" src="https://randomuser.me/api/portraits/men/14.jpg" alt="img">
+                    <img class="w-20 h-20 my-auto object-contain rounded-full outline outline-white" id="profile-image"
+                        src="https://randomuser.me/api/portraits/men/14.jpg" alt="img">
                     <div class="flex flex-col justify-evenly w-full">
-                        <h2 class="text-2xl font-semibold" id="profile-first-name">Frank</h2>
+                        <h2 class="text-3xl font-semibold" id="profile-first-name">Frank</h2>
                         <p id="profile-full-name" class="text-sm">Frank John Mackasky</p>
                     </div>
                 </div>
 
                 <div class="flex p-2 gap-2">
                     <div class="px-3 py-1 bg-white text-black rounded-3xl flex items-center gap-2">
-                            <span class="iconify w-4 h-4 text-black" data-icon="material-symbols:male"></span>
-                            <span id="profile-gender" class="text-sm font-medium">
-                                Female
-                            </span>
+                        <span class="iconify w-4 h-4 text-black" data-icon="material-symbols:male"></span>
+                        <span id="profile-gender" class="text-sm font-medium">
+                            Female
+                        </span>
                     </div>
                     <div class="px-5 py-1 bg-orange-400 text-black rounded-3xl flex items-center gap-2">
-                        <span class="iconify w-4 h-4 text-black" data-icon="material-symbols:cake-add-outline-rounded"></span>
+                        <span class="iconify w-4 h-4 text-black"
+                            data-icon="material-symbols:cake-add-outline-rounded"></span>
                         <span id="profile-age" class="text-sm font-medium">40</span>
                     </div>
                 </div>
 
                 <div class="p-2 mt-2">
-                    <p id="profile-intro" class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus fuga esse neque.</p>
+                    <p id="profile-intro" class="">I’m Daniel, a 28-year-old originally from Nigeria, currently living
+                        in Berlin, Germany. I enjoy staying informed and
+                        exploring new cultures and ideas wherever I find myself.
+
+                        Right now, I’m checking the current weather in Berlin to see what today feels like, whether
+                        it’s a sunny afternoon
+                        perfect for a walk, or a cold, cloudy day better spent indoors.
+
+                        To stay connected beyond my city, I keep up with the latest news from Germany, giving me a quick
+                        snapshot of what’s
+                        happening across the country right now.
+
+                        When it’s time to unwind, I turn to movies. My favorite movie says a lot about my taste and the
+                        kinds of stories I enjoy
+                        watching.
+
+                        This dashboard brings my world together, who I am, where I live, what’s happening around me,
+                        and what I love to watch.</p>
                     <div class="flex py-2 gap-2 items-center mt-2 font-extralight">
-                        <span class="iconify w-4 h-4 text-white" data-icon="material-symbols:location-on-outline"></span>
+                        <span class="iconify w-4 h-4 text-white"
+                            data-icon="material-symbols:location-on-outline"></span>
                         <span id="profile-location" class="text-xs">New York, USA</span>
                     </div>
                 </div>
             </div>
 
             <!-- weather -->
-            <div class="bg-white p-4 rounded shadow lg:col-span-2 lg:col-start-1 lg:row-span-3">weather</div>
+            <div class="bg-blue-600 text-white p-4 rounded-2xl shadow lg:col-span-2 lg:col-start-1 lg:row-span-3">
 
-            <div class="bg-white p-4 rounded shadow lg:col-span-3 lg:col-start-3 lg:row-span-2">Movies</div>
+                <div class="flex gap-2 items-center justify-center py-1">
+                    <span class="iconify w-6 h-6" data-icon="material-symbols:location-on-outline"></span>
+                    <span id="weather-location" class="">New York, USA</span>
+                </div>
 
-            <div class="bg-white p-4 rounded shadow lg:col-span-3 lg:col-start-3 lg:row-span-5">news Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, officia. Numquam vitae facere porro, at ipsam ut beatae maiores enim cum eos eligendi autem sint quod dolor incidunt aut quia dicta nobis. 
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque perferendis rem modi quibusdam obcaecati officia voluptatibus exercitationem quam reprehenderit! Corporis aperiam error nobis in voluptate inventore, aspernatur consequuntur accusamus quam, iusto ducimus.
+                <div class="flex flex-col justify-center items-center py-1 gap-1">
+                    <p id="weather-teparature"
+                        class="text-9xl font-mono font-semibold [text-shadow:0_0_4px_rgba(255,255,255,0.8)]">
+                        20<sup class="text-4xl align-super font-extralight [text-shadow:0_0_0_rgba(0,0,0,0)]">∘</sup>
+                    </p>
+                    <p id="weather-description" class="text-lg font-m -mt-4">Thunderstorm
+                    </p>
+                    <p id="weather-day" class="text-xs font-extralight">Monday, 17 May</p>
+                </div>
+
+                <div class="flex justify-evenly items-center mt-6">
+                    <div id="weather-icon">
+                        <img class="w-58 h-58" src="//cdn.weatherapi.com/weather/64x64/night/116.png"
+                            alt="weather-icon">
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <span class="iconify w-5 h-5" data-icon="solar:wind-bold-duotone"></span>
+                        <span iid="weather-wind" class="font-bold">11.9</span>
+                        <span class="text-xs font-extralight">Wind</span>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <span class="iconify w-5 h-5" data-icon="solar:waterdrop-broken"></span>
+                        <span iid="weather-humidity" class="font-bold">93</span>
+                        <span class="text-xs font-extralight">Humidity</span>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <span class="iconify w-5 h-5" data-icon="solar:cloud-rain-broken"></span>
+                        <span iid="weather-percipitation" class="font-bold">0.0</span>
+                        <span class="text-xs font-extralight">Chance of rain</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- news -->
+            <div class="bg-white flex flex-col gap-2 p-4 rounded-2xl shadow lg:col-span-3 lg:col-start-3 lg:row-span-5">
+
+                <div class="flex justify-between">
+                    <div class="max-w-48 lg:max-w-64">
+                        <p class="uppercase text-[10px] mb-1" id="news-date-1">november 11, 2026</p>
+                        <h2 class="font-bold text-xl mb-1" id="news-title-1">How to Cure Ebola ggggggg gggggg hhhhhh</h2>
+                        <div class="mb-4 text-sm font-semibold">
+                            <span class="text-slate-500">By </span><span class="text-orange-400" id="news-author-1">Jackson</span>
+                        </div>
+                        <a id="news-url-1" href="" target="_blank"><span
+                                class="text-xs inline-flex justify-center items-center px-2 py-1 text-white rounded-md bg-blue-600"
+                                >Read More</span></a>
+                    </div>
+                    <div>
+                        <img class="w-80 h-48 rounded-lg" id="news-image-1"
+                            src="https://cdn.vanguardngr.com/wp-content/uploads/2025/10/Nnamdi-Kanu.jpg" alt="news-image">
+                    </div>
+                </div>
+
+                <div class="flex justify-between">
+                    <div class="max-w-48 lg:max-w-64">
+                        <p class="uppercase text-[10px] mb-1" id="news-date-2">november 11, 2026</p>
+                        <h2 class="font-bold text-xl mb-1" id="news-title-2">How to Cure Ebola ggggggg gggggg hhhhhh</h2>
+                        <div class="mb-4 text-sm font-semibold">
+                            <span class="text-slate-500">By </span><span class="text-orange-400" id="news-author-2">Jackson</span>
+                        </div>
+                        <a id="news-url-2" href="" target="_blank"><span class="text-xs inline-flex justify-center items-center px-2 py-1 text-white rounded-md bg-blue-600">Read More</span></a>
+                    </div>
+                    <div>
+                        <img class="w-80 h-48 rounded-lg" id="news-image-2"
+                            src="https://cdn.vanguardngr.com/wp-content/uploads/2025/10/Nnamdi-Kanu.jpg"
+                            alt="news-image">
+                    </div>
+                </div>
+
+                <div class="flex justify-between">
+                    <div class="max-w-48 lg:max-w-64">
+                        <p class="uppercase text-[10px] mb-1" id="news-date-3">november 11, 2026</p>
+                        <h2 class="font-bold text-xl mb-1" id="news-title-3">How to Cure Ebola ggggggg gggggg hhhhhh</h2>
+                        <div class="mb-4 text-sm font-semibold">
+                            <span class="text-slate-500">By </span><span class="text-orange-400" id="news-author-3">Jackson</span>
+                        </div>
+                        <a id="news-url-3" href="" target="_blank"><span
+                                class="text-xs inline-flex justify-center items-center px-2 py-1 text-white rounded-md bg-blue-600">Read
+                                More</span></a>
+                    </div>
+                    <div>
+                        <img class="w-80 h-48 rounded-lg" id="news-image-3"
+                            src="https://cdn.vanguardngr.com/wp-content/uploads/2025/10/Nnamdi-Kanu.jpg" alt="news-image">
+                    </div>
+                </div>
+
+
+            </div>
+
+            <!-- movie -->
+            <div
+                class="bg-stone-950 text-white flex gap-10 p-4 rounded-2xl shadow lg:col-span-2 lg:col-start-3 lg:row-span-2">
+                <div>
+                    <img id="movie-poster" class="rounded-2xl" src="https://image.tmdb.org/t/p/w154/9cqNxx0GxF0bflZmeSMuL5tnGzr.jpg"
+                        alt="movie-poster">
+                </div>
+                <div class="max-w-60">
+                    <div class="flex justify-between items-center">
+                        <span id="movie-title" class="text-3xl tracking-wide">A Star is born</span>
+                        <span id="movie-rating" class="align-middle bg-orange-400 p-1 text-black font-bold text-xs rounded-md">1.5</span>
+                    </div>
+
+                    <span
+                        class="mt-4 font-semibold text-sm inline-flex items-center justify-center px-4  bg-white text-black rounded-3xl"
+                        id="movie-release-year">2018</span>
+
+                    <p class="mt-5 font-[150]" id="movie-overview">Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit.</p>
+                </div>
             </div>
         </div>
-        
+
     </div>
 </body>
+
 </html>
