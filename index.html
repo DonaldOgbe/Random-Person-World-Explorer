@@ -13,40 +13,40 @@
     <header class="flex justify-center lg:justify-start">
         <h1 class="text-3xl font-bold text-black p-5 text-center">Random Person World Explorer</h1>
     </header>
-    <div class="max-w-7xl mx-auto my-5 px-4 sm:px-5 lg:px-8">
-        <div class="grid lg:grid-cols-5 gap-6 grid-flow-row-dense">
+    <div class="max-w-7xl mx-auto my-5 px-5 sm:px-5 lg:px-8">
+        <div class="flex flex-col lg:grid lg:grid-cols-5 gap-6 lg:grid-flow-row-dense">
             <!-- profile-card -->
             <div id="profile-card"
                 class="bg-stone-950  text-white p-4 rounded-2xl shadow lg:col-span-2 lg:col-start-1 lg:row-span-4 py-4">
 
                 <div class="flex p-2 gap-5">
                     <img class="w-20 h-20 my-auto object-contain rounded-full outline outline-white" id="profile-image"
-                        src="" alt="img">
+                        src="https://randomuser.me/api/portraits/men/40.jpg" alt="img">
                     <div class="flex flex-col justify-evenly w-full">
-                        <h2 class="text-3xl font-semibold" id="profile-first-name"></h2>
-                        <p id="profile-full-name" class="text-sm"></p>
+                        <h2 class="text-3xl font-semibold" id="profile-first-name">Loading...</h2>
+                        <p id="profile-full-name" class="text-sm">Loading...</p>
                     </div>
                 </div>
 
                 <div class="flex p-2 gap-2">
                     <div class="px-3 py-1 bg-white text-black rounded-3xl flex items-center gap-2">
                         <span class="iconify w-4 h-4 text-black" data-icon="material-symbols:male"></span>
-                        <span id="profile-gender" class="text-sm font-medium uppercase">
+                        <span id="profile-gender" class="text-sm font-medium uppercase">Loading...
                         </span>
                     </div>
                     <div class="px-5 py-1 bg-orange-400 text-black rounded-3xl flex items-center gap-2">
                         <span class="iconify w-4 h-4 text-black"
                             data-icon="material-symbols:cake-add-outline-rounded"></span>
-                        <span id="profile-age" class="text-sm font-medium"></span>
+                        <span id="profile-age" class="text-sm font-medium">0</span>
                     </div>
                 </div>
 
                 <div class="p-2 mt-2">
-                    <p id="profile-intro" class=""></p>
+                    <p id="profile-intro" class="">Loading...</p>
                     <div class="flex py-2 gap-2 items-center mt-2 font-extralight">
                         <span class="iconify w-4 h-4 text-white"
                             data-icon="material-symbols:location-on-outline"></span>
-                        <span id="profile-location" class="text-xs"></span>
+                        <span id="profile-location" class="text-xs">Loading...</span>
                     </div>
                 </div>
             </div>
@@ -56,35 +56,35 @@
 
                 <div class="flex gap-2 items-center justify-center py-1">
                     <span class="iconify w-6 h-6" data-icon="material-symbols:location-on-outline"></span>
-                    <span id="weather-location" class=""></span>
+                    <span id="weather-location" class="">Loading...</span>
                 </div>
 
                 <div class="flex flex-col justify-center items-center py-1 gap-1">
                     <p id="weather-temperature"
-                        class="text-9xl font-mono font-semibold [text-shadow:0_0_4px_rgba(255,255,255,0.8)]"><sup
+                        class="py-2 lg:py-0 text-8xl lg:text-9xl font-mono font-semibold [text-shadow:0_0_4px_rgba(255,255,255,0.8)]">0.0<sup
                             class="text-4xl align-super font-extralight [text-shadow:0_0_0_rgba(0,0,0,0)]">∘</sup>
                     </p>
-                    <p id="weather-condition" class="text-lg font-m -mt-4"></p>
-                    <p id="weather-day" class="text-xs font-extralight"></p>
+                    <p id="weather-condition" class="text-lg -mt-4 py-1">Loading...</p>
+                    <p id="weather-day" class="text-xs font-extralight">Loading...</p>
                 </div>
 
-                <div class="flex justify-evenly items-center mt-6">
+                <div class="flex justify-between items-center mt-6">
                     <div>
-                        <img id="weather-icon" class="w-58 h-58" src="" alt="weather-icon">
+                        <img id="weather-icon" class="w-16 h-16 lg:w-20 lg:h-20" src="//cdn.weatherapi.com/weather/64x64/day/116.png" alt="weather-icon">
                     </div>
                     <div class="flex flex-col items-center">
                         <span class="iconify w-5 h-5" data-icon="solar:wind-bold-duotone"></span>
-                        <span id="weather-wind" class="font-bold"></span>
+                        <span id="weather-wind" class="font-bold">0.0</span>
                         <span class="text-xs font-extralight">Wind</span>
                     </div>
                     <div class="flex flex-col items-center">
                         <span class="iconify w-5 h-5" data-icon="solar:waterdrop-broken"></span>
-                        <span id="weather-humidity" class="font-bold"></span>
+                        <span id="weather-humidity" class="font-bold">0.0</span>
                         <span class="text-xs font-extralight">Humidity</span>
                     </div>
                     <div class="flex flex-col items-center">
                         <span class="iconify w-5 h-5" data-icon="solar:cloud-rain-broken"></span>
-                        <span id="weather-percipitation" class="font-bold"></span>
+                        <span id="weather-percipitation" class="font-bold">0.0</span>
                         <span class="text-xs font-extralight">Chance of rain</span>
                     </div>
                 </div>
@@ -93,80 +93,82 @@
             <!-- news -->
             <div class="bg-white flex flex-col gap-2 p-4 rounded-2xl shadow lg:col-span-3 lg:col-start-3 lg:row-span-5">
 
-                <div class="flex justify-between">
-                    <div class="max-w-48 lg:max-w-64">
-                        <p class="uppercase text-[10px] mb-1" id="news-date-1"></p>
-                        <h2 class="font-bold text-xl mb-1" id="news-title-1">
+                <div class="flex lg:flex-row flex-col justify-between">
+                    <div class="max-w-44 lg:max-w-64 py-2 ">
+                        <p class="uppercase text-[10px] mb-1" id="news-date-1">Loading...</p>
+                        <h2 class="font-bold text-xl mb-1" id="news-title-1">Loading...
                         </h2>
                         <div class="mb-4 text-sm font-semibold">
                             <span class="text-slate-500">By </span><span class="text-orange-400"
-                                id="news-author-1"></span>
+                                id="news-author-1">Loading...</span>
                         </div>
                         <a id="news-url-1" href="" target="_blank"><span
                                 class="text-xs inline-flex justify-center items-center px-2 py-1 text-white rounded-md bg-blue-600">Read
                                 More</span></a>
                     </div>
                     <div>
-                        <img class="w-80 h-48 rounded-lg" id="news-image-1" src="" alt="news-image">
+                        <img class="w-72 lg:w-80 h-48 rounded-lg" id="news-image-1" src="https://cdn.vanguardngr.com/wp-content/uploads/2025/10/Nnamdi-Kanu.jpg" alt="news-image">
                     </div>
                 </div>
 
-                <div class="flex justify-between">
-                    <div class="max-w-48 lg:max-w-64">
-                        <p class="uppercase text-[10px] mb-1" id="news-date-2"></p>
-                        <h2 class="font-bold text-xl mb-1" id="news-title-2">
+                <div class="flex lg:flex-row flex-col justify-between">
+                    <div class="max-w-44 lg:max-w-64 py-2 ">
+                        <p class="uppercase text-[10px] mb-1" id="news-date-2">Loading...</p>
+                        <h2 class="font-bold text-xl mb-1" id="news-title-2">Loading...
                         </h2>
                         <div class="mb-4 text-sm font-semibold">
-                            <span class="text-slate-500">By </span><span class="text-orange-400"
-                                id="news-author-2"></span>
+                            <span class="text-slate-500">By </span><span class="text-orange-400" id="news-author-2">Loading...</span>
                         </div>
                         <a id="news-url-2" href="" target="_blank"><span
                                 class="text-xs inline-flex justify-center items-center px-2 py-1 text-white rounded-md bg-blue-600">Read
                                 More</span></a>
                     </div>
                     <div>
-                        <img class="w-80 h-48 rounded-lg" id="news-image-2" src="" alt="news-image">
+                        <img class="w-72 lg:w-80 h-48 rounded-lg" id="news-image-2"
+                            src="https://cdn.vanguardngr.com/wp-content/uploads/2025/10/Nnamdi-Kanu.jpg" alt="news-image">
                     </div>
                 </div>
 
-                <div class="flex justify-between">
-                    <div class="max-w-48 lg:max-w-64">
-                        <p class="uppercase text-[10px] mb-1" id="news-date-3"></p>
-                        <h2 class="font-bold text-xl mb-1" id="news-title-3">
+                <div class="flex lg:flex-row flex-col justify-between">
+                    <div class="max-w-44 lg:max-w-64 py-2 ">
+                        <p class="uppercase text-[10px] mb-1" id="news-date-3">Loading...</p>
+                        <h2 class="font-bold text-xl mb-1" id="news-title-3">Loading...
                         </h2>
                         <div class="mb-4 text-sm font-semibold">
-                            <span class="text-slate-500">By </span><span class="text-orange-400"
-                                id="news-author-3"></span>
+                            <span class="text-slate-500">By </span><span class="text-orange-400" id="news-author-3">Loading...</span>
                         </div>
                         <a id="news-url-3" href="" target="_blank"><span
                                 class="text-xs inline-flex justify-center items-center px-2 py-1 text-white rounded-md bg-blue-600">Read
                                 More</span></a>
                     </div>
                     <div>
-                        <img class="w-80 h-48 rounded-lg" id="news-image-3" src="" alt="news-image">
+                        <img class="w-72 lg:w-80 h-48 rounded-lg" id="news-image-3"
+                            src="https://cdn.vanguardngr.com/wp-content/uploads/2025/10/Nnamdi-Kanu.jpg" alt="news-image">
                     </div>
                 </div>
+
+                
 
 
             </div>
 
             <!-- movie -->
             <div
-                class="bg-stone-950 text-white lg:flex gap-10 p-4 rounded-2xl shadow lg:col-span-2 lg:col-start-3 lg:row-span-2 lg:h-72">
-                <div>
-                    <img id="movie-poster" class="rounded-2xl h-64 w-auto object-cover" src="https://image.tmdb.org/t/p/w154/usJxHVxT70lAA7AynnZlmPth7R3.jpg" alt="movie-poster">
+                class="bg-stone-950 text-white lg:flex lg:gap-10 p-4 rounded-2xl shadow lg:col-span-2 lg:col-start-3 lg:row-span-2 lg:h-72">
+                <div class="mb-2 lg:mb-0">
+                    <img id="movie-poster" class="rounded-2xl h-64 w-auto mx-auto lg:mx-0 object-cover" src="https://image.tmdb.org/t/p/w154/usJxHVxT70lAA7AynnZlmPth7R3.jpg" alt="movie-poster">
                 </div>
                 <div class="lg:max-w-64 flex flex-col h-full">
                     <div class="flex justify-between items-center">
-                        <span id="movie-title" class="text-lg lg:text-2xl tracking-wide"></span>
+                        <span id="movie-title" class="text-lg lg:text-2xl tracking-wide">Loading...</span>
                         <span id="movie-rating"
-                            class="align-middle bg-orange-400 p-1 text-black font-bold text-xs rounded-md"></span>
+                            class="align-middle bg-orange-400 p-1 text-black font-bold text-xs rounded-md">0.0</span>
                     </div>
 
                     <span
                         class="mt-4 w-14 font-semibold text-sm inline-flex items-center justify-center px-4  bg-white text-black rounded-3xl"
                         id="movie-release-year"></span>
-                        <p class="mt-5 font-[150] overflow-y-auto" id="movie-overview"></p>
+                        <p class="mt-5 font-[150] overflow-y-auto" id="movie-overview">Loading...</p>
 
                 </div>
             </div>
