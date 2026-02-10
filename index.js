@@ -29,8 +29,15 @@ async function fetchWeather(city) {
 
 async function fetchNews(countryCode) {
   try {
-    const apiKey = "3b6363220f934639aaa54c34fbcc65f0";
-    const url = `https://api.worldnewsapi.com/top-news?source-country=${countryCode}&language=en&max-news-per-cluster=1`;
+    const today = new Date();
+    const yesterday = new Date(today);
+
+    yesterday.setDate(today.getDate() - 1);
+
+    const previousDate = yesterday.toISOString().split("T")[0];
+
+    const apiKey = "aa318525f6244f449581ebe5a48602f2";
+    const url = `https://api.worldnewsapi.com/top-news?source-country=${countryCode}&language=en&date=${previousDate}&max-news-per-cluster=1`;
 
     const response = await fetch(url, {
       headers: {
@@ -42,7 +49,7 @@ async function fetchNews(countryCode) {
 
     if (!data.top_news || data.top_news.length < 3) {
       const newUrl =
-        "https://api.worldnewsapi.com/top-news?source-country=us&language=en&max-news-per-cluster=1";
+        `https://api.worldnewsapi.com/top-news?source-country=us&language=en&date=${previousDate}&max-news-per-cluster=1`;
 
       const response = await fetch(newUrl, {
         headers: {
@@ -54,7 +61,6 @@ async function fetchNews(countryCode) {
       return [newData.top_news[0], newData.top_news[1], newData.top_news[2]];
     }
 
-    console.log(data);
     const news = [data.top_news[0], data.top_news[1], data.top_news[2]];
 
     return news;
@@ -214,6 +220,7 @@ async function loadDashBoard() {
 
   try {
     const newsData = await fetchNews(countryCode);
+    console.log(newsData);
     for (let i = 0; i < newsData.length; i++) {
       updateNews(newsData[i], i + 1);
     }
